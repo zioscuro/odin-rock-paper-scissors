@@ -12,41 +12,76 @@ function getComputerChoice() {
     }
 }
 
-function playRound(playerSelection, computerSelection) {
-    const playerChoice = playerSelection.toLowerCase();
-    if (playerChoice === computerSelection) {
+function playRound(player, computer) {
+    
+    if (player.choice === computer.choice) {
         return "It'a Draw!";
     } 
-    if (playerChoice === "rock"){
-        if (computerSelection === "scissors"){
+    if (player.choice === "rock"){
+        if (computer.choice === "scissors"){
+            player.counter += 1;
             return "You Win! Rock beats Scissors";
         }
-        if (computerSelection === "paper"){
+        if (computer.choice === "paper"){
+            computer.counter += 1;
             return "You Lose! Paper beats Rock";
         }
     }
-    if (playerChoice === "paper"){
-        if (computerSelection === "rock"){
+    if (player.choice === "paper"){
+        if (computer.choice === "rock"){
+            player.counter += 1;
             return "You Win! Paper beats Rock";
         }
-        if (computerSelection === "scissors"){
+        if (computer.choice === "scissors"){
+            computer.counter += 1;
             return "You Lose! Scissors beats Paper";
         }
     }
-    if (playerChoice === "scissors"){
-        if (computerSelection === "paper"){
+    if (player.choice === "scissors"){
+        if (computer.choice === "paper"){
+            player.counter += 1;
             return "You Win! Scissors beats Paper";
         }
-        if (computerSelection === "rock"){
+        if (computer.choice === "rock"){
+            computer.counter += 1;
             return "You Lose! Rock beats Scissors";
         }
     }
     return "something wrong!";
   }
 
-const playerSelection = "paper";
-const computerSelection = getComputerChoice();
+function game() {
 
-console.log("Player: " + playerSelection)
-console.log("Computer: " + computerSelection)
-console.log(playRound(playerSelection, computerSelection));
+    const player = {
+        choice: null,
+        counter: 0
+    }
+
+    const computer = {
+        choice: null,
+        counter: 0
+    }
+
+    for (let i = 0; i < 5; i++) {        
+        
+        player.choice = prompt("Rock, Paper or Scissors?").toLowerCase();
+        while (player.choice !== "rock" && player.choice !== "paper" && player.choice !== "scissors") {
+            player.choice = prompt("Select Again").toLowerCase();
+        }
+        computer.choice = getComputerChoice();
+        
+        console.log("PlayerChoice: " +  player.choice + " PlayerCounter: " + player.counter);
+        console.log("ComputerChoice: " + computer.choice + " ComputerCounter: " + computer.counter);
+        console.log(playRound(player, computer));
+     }
+
+    if (player.counter > computer.counter) {
+        alert("You: " + player.counter + " Computer: " + computer.counter + "....You Win!");
+    } else if (player.counter < computer.counter) {
+        alert("You: " + player.counter + " Computer: " + computer.counter + "....Computer Wins!");
+    } else {
+        alert("You: " + player.counter + " Computer: " + computer.counter + "....It's a Draw!");
+    }
+}
+
+game();
