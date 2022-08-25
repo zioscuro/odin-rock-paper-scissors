@@ -4,20 +4,54 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock, Paper, Scissors</title>
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
     <script src="./script.js" defer></script>
 </head>
 <body>
-    <button id="rock">Rock</button>
-    <button id="paper">Paper</button>
-    <button id="scissors">Scissors</button>
-    <div id="display">
-        <div id="player-choice"></div>
-        <div id="player-counter"></div>
-        <div id="computer-choice"></div>
-        <div id="computer-counter"></div>
-        <div id="results-display"></div>
-        <div id="winner-display"></div>
+    <div class="container">
+        <div class="title">
+            <h1>Rock Paper Scissors</h1>
+            <p>First to 5 points wins!</p>
+        </div>
+        <div id="choices">
+            <button id="rock" class="choice">
+                <i class="fa-solid fa-hand-back-fist fa-10x"></i>
+                <p>Rock</p>
+            </button>
+            <button id="paper" class="choice">
+                <i class="fa-solid fa-hand fa-10x"></i>
+                <p>Paper</p>
+            </button>
+            <button id="scissors" class="choice">
+                <i class="fa-solid fa-hand-scissors fa-10x"></i>
+                <p>Scissors</p>
+            </button>
+        </div>
+        <div id="display">
+            <div class="display-choice">
+                <div class="display-choice-title">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <div id="player-choice">player</div>
+                <div class="display-counter-title">Score</div>
+                <div id="player-counter">0</div>
+            </div>
+            <div class="display-results">
+                <div id="round-display"></div>
+                <div id="winner-display"></div>
+            </div>
+            <div class="display-choice">
+                <div class="display-choice-title">
+                    <i class="fa-solid fa-computer"></i>
+                </div>
+                <div id="computer-choice">computer</div>
+                <div class="display-counter-title">Score</div>
+                <div id="computer-counter">0</div>                
+            </div>
+        </div>
+
     </div>
 </body>
 </html>

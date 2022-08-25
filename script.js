@@ -1,8 +1,8 @@
-const displayResult = document.getElementById('results-display');
 const displayPlayerChoice = document.getElementById('player-choice');
 const displayPlayerCounter = document.getElementById('player-counter');
 const displayComputerChoice = document.getElementById('computer-choice');
 const displayComputerCounter = document.getElementById('computer-counter');
+const displayRound = document.getElementById('round-display');
 const displayWinner = document.getElementById('winner-display');
 
 let playerCounter = 0;
@@ -25,7 +25,7 @@ function getComputerChoice() {
 function playRound(player, computer) {
             
     if (player === computer) {
-        return 'It\'a Draw!';
+        return 'It\'s a Draw!';
     } 
     if (player === 'rock'){
         if (computer === 'scissors'){
@@ -66,20 +66,20 @@ function resetGame() {
     computerCounter = 0;
 }
 
-function displayRound(player) {    
+function game(player) {    
     if (playerCounter === 5 || computerCounter === 5) {
         resetGame();
     }
 
     const playerChoice = player;
     const computerChoice = getComputerChoice();    
-    const result = playRound(playerChoice, computerChoice);
+    const round = playRound(playerChoice, computerChoice);
     
-    displayResult.textContent = result;
     displayPlayerChoice.textContent = playerChoice;
     displayComputerChoice.textContent = computerChoice;
     displayPlayerCounter.textContent = playerCounter;
     displayComputerCounter.textContent = computerCounter;
+    displayRound.textContent = round;
 
     if (playerCounter === 5) {
         displayWinner.textContent = 'CONGRATS, YOU WIN THE GAME!';        
@@ -92,13 +92,13 @@ function displayRound(player) {
 
 const rockBtn = document.getElementById('rock');
 rockBtn.addEventListener('click', ()=>{
-    displayRound('rock');
+    game('rock');
 });
 const paperBtn = document.getElementById('paper');
 paperBtn.addEventListener('click', ()=>{
-    displayRound('paper');
+    game('paper');
 });
 const scissorsBtn = document.getElementById("scissors")
 scissorsBtn.addEventListener('click', ()=>{
-    displayRound('scissors');
+    game('scissors');
 });

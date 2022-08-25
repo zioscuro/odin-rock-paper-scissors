@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+html {
+    font-family: 'Nunito', sans-serif;
+    font-size: 15px;
+}
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #55423d;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.title {
+    position: absolute;
+    color: #fffffe;
+    top: 1.5rem;
+}
+
+.title h1{
+    font-size: 3rem;
+    margin: 0;
+}
+
+.title p{
+    font-size: 1.5rem;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+}
+
+#choices {
+    margin-bottom: 2rem;
+}
+
+#choices button {    
+    background-color: #ffc0ad;
+    border: 5px solid #271c19;
+    color: #271c19;
+    padding: 1.5rem;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+#choices button:hover {
+    background-color: #aa7f72;
+    color: #fffffe;
+    border-color: #fffffe;
+}
+
+
+#choices button p {
+    font-family: 'Nunito', sans-serif;
+    font-size: 2rem;
+    margin: 0
+}
+
+.choice {
+    padding: 10px;
+    margin: 0 30px;
+}
+
+#display {
+    width: 50vw;
+    height: 30vh;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff3ec;
+    padding: 2rem 3rem;
+    border-radius: 0.5rem;
+    color: #271c19;
+    font-size: 2rem;   
+}
+
+.display-choice, .display-results {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.display-results {
+    border-radius: 1rem;    
+    margin: 1rem 2rem;  
+    padding: 1rem;
+    width:25vw;
+    background-color: #ffc0ad;
+}
+
+.display-choice {
+    border-radius: 1rem;
+    margin: 1rem;    
+    padding: 1rem;
+    width:8vw;
+    background-color: #e78fb3;
+}
+
+.display-choice i {
+    color: #271c19;
+    font-size: 5rem;
+}
+
+.display-counter-title, .display-choice-title {
+    font-size: 1.5rem;
+}
+
+#round-display {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+#winner-display {
+    margin-bottom: 3rem;
+    font-weight: 700;
+    font-size: 3rem;
+    color: #9656a1;
+    text-align: center;
+}
