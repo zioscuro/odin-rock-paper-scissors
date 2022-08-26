@@ -3,7 +3,7 @@
 
 html {
     font-family: 'Nunito', sans-serif;
-    font-size: 15px;
+    font-size: 10px;
 }
 
 body {
@@ -19,14 +19,12 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;
 }
 
 /* Title section */
 .title {
-    position: absolute;
     color: #fffffe;
-    top: 1.5rem;
+    margin: 3rem 0;
 }
 
 .title h1{
@@ -41,11 +39,7 @@ body {
     text-align: center;
 }
 
-/* Rock Paper Scissors choice section */
-#choices {
-    margin-bottom: 3rem;
-}
-
+/* Rock Paper Scissors choice buttons section */
 #choices button {    
     background-color: #ffc0ad;
     border: 5px solid #271c19;
@@ -53,6 +47,10 @@ body {
     padding: 1.5rem;
     border-radius: 2rem;
     cursor: pointer;
+}
+
+#choices button i {
+    font-size: 8rem;
 }
 
 #choices button p {
@@ -74,15 +72,16 @@ body {
 
 /* Display section */
 #display {
-    width: 50vw;
-    height: 30vh;
+    width: 70rem;
+    height: 40rem;
     display: flex;
     justify-content: space-between;
     background-color: #fff3ec;
     padding: 2rem 3rem;
     border-radius: 0.5rem;
     color: #271c19;
-    font-size: 2rem;   
+    font-size: 2rem;
+    margin: 3rem 0;   
 }
 
 .display-choice, .display-results {
@@ -93,7 +92,7 @@ body {
 }
 
 .display-results {
-    width: 25rem;
+    width: 30rem;
     margin: 1rem 2rem;  
     padding: 1rem;
 }
@@ -121,7 +120,7 @@ body {
 }
 
 #winner-display {
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
     font-weight: 700;
     font-size: 3rem;
     color: #9656a1;
