@@ -1,3 +1,4 @@
+/* Font import and general page setup */
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
 html {
@@ -10,6 +11,7 @@ body {
     box-sizing: border-box;
 }
 
+/* Main container */
 .container {
     background-color: #55423d;
     height: 100vh;
@@ -20,6 +22,7 @@ body {
     position: relative;
 }
 
+/* Title section */
 .title {
     position: absolute;
     color: #fffffe;
@@ -38,8 +41,9 @@ body {
     text-align: center;
 }
 
+/* Rock Paper Scissors choice section */
 #choices {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 
 #choices button {    
@@ -51,24 +55,24 @@ body {
     cursor: pointer;
 }
 
+#choices button p {
+    font-family: 'Nunito', sans-serif;
+    font-size: 2rem;
+    margin: 0.5rem 0 0 0;
+}
+
 #choices button:hover {
     background-color: #aa7f72;
     color: #fffffe;
     border-color: #fffffe;
 }
 
-
-#choices button p {
-    font-family: 'Nunito', sans-serif;
-    font-size: 2rem;
-    margin: 0
-}
-
 .choice {
-    padding: 10px;
-    margin: 0 30px;
+    padding: 1rem;
+    margin: 0 1rem;
 }
 
+/* Display section */
 #display {
     width: 50vw;
     height: 30vh;
@@ -89,18 +93,16 @@ body {
 }
 
 .display-results {
-    border-radius: 1rem;    
+    width: 25rem;
     margin: 1rem 2rem;  
     padding: 1rem;
-    width:25vw;
-    background-color: #ffc0ad;
 }
 
 .display-choice {
     border-radius: 1rem;
     margin: 1rem;    
     padding: 1rem;
-    width:8vw;
+    width:10rem;
     background-color: #e78fb3;
 }
 
@@ -109,7 +111,7 @@ body {
     font-size: 5rem;
 }
 
-.display-counter-title, .display-choice-title {
+.display-counter-title {
     font-size: 1.5rem;
 }
 
